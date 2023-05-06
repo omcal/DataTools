@@ -1,0 +1,19 @@
+.label {
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.54);
+
+}
+.input-group {
+  margin-bottom: 5rem;
+
+
+}
+.label-range {
+  margin-bottom: 2.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.54);
+
+}

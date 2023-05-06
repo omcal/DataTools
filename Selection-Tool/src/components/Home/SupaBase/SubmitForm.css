@@ -1,0 +1,47 @@
+/* SubmitForm.css */
+.container {
+    margin-top: 2rem;
+}
+
+.input-field {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.input-field label {
+    position: absolute;
+    left: 0;
+    top: -1.5rem;
+}
+
+.select-label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 8px;
+}
+
+.checkbox-item label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 8px;
+}
