@@ -60,6 +60,7 @@ function SubmitForm() {
                 { id: 7, checked: false, label: 'Stream' },
                 { id: 8, checked: false, label: 'Batch' },
                 { id: 9, checked: false, label: 'Big-Data' },
+                { id: 10, checked: false, label: 'Vector Database' },
             ]);
         } else if (selectedCategory === 'mining') {
             setCustomType([
@@ -169,26 +170,7 @@ function SubmitForm() {
                     <input id="LinkToMD" type="url" name="LinkToMD" onChange={handleChange} required />
                     <label htmlFor="LinkToMD">Link to More Details</label>
                 </div>
-                <div className="input-field">
-                    <label htmlFor="category" className="select-label">Technology Category</label>
-                    <select
-                        name="category"
-                        onChange={handleChange}
-                        value={formData.category}
-                        required
-                        className="browser-default"
-                        style={{ paddingLeft: '8px' }}
-                    >
-                        <option value="" >
-                            Choose a category
-                        </option>
-                        {categoryList.map((category) => (
-                            <option key={category.id} value={category.value} style={{ paddingLeft: '8px' }}>
-                                {category.label}
-                            </option>
-                        ))}
-                    </select>
-                </div>
+
                 <div className="input-field">
                     <label htmlFor="rating" className="select-label">Data Science WorkFlow</label>
                     <select
@@ -210,6 +192,26 @@ function SubmitForm() {
                     </select>
                 </div>
                 <div className="input-field">
+                    <label htmlFor="category" className="select-label">Technology Category</label>
+                    <select
+                        name="category"
+                        onChange={handleChange}
+                        value={formData.category}
+                        required
+                        className="browser-default"
+                        style={{ paddingLeft: '8px' }}
+                    >
+                        <option value="" >
+                            Choose a category
+                        </option>
+                        {categoryList.map((category) => (
+                            <option key={category.id} value={category.value} style={{ paddingLeft: '8px' }}>
+                                {category.label}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div className="input-field">
                     <input id="price" type="number" step="0.01" name="price" onChange={handleChange} required />
                     <label htmlFor="price">Price</label>
                 </div>
@@ -222,7 +224,7 @@ function SubmitForm() {
                     <label htmlFor="score">Score</label>
                 </div>
                 <div className="input-field">
-                    <label htmlFor="customType">Custom Type</label>
+                    <label htmlFor="customType">Criteria</label>
                     <Select
                         isMulti
                         options={customType.map((type) => ({ value: type.label, label: type.label }))}

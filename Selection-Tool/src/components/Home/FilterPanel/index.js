@@ -35,7 +35,7 @@ const FilterPanel = ({
 
       />
     <div className='input-group'>
-      <p className='label'>Type</p>
+      <p className='label'>Criteria</p>
       {type.map((customType) => (
         <CheckboxProton
           key={customType.id}

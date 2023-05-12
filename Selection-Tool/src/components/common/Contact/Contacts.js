@@ -16,16 +16,13 @@ const Contacts = () => {
 
             <div>
                 <h3>Contacts</h3>
-                <p>email:
+                <p>Email:
                     <a  href="mailto:
-                    ">omeremail</a>
+                    "> TempMail@Mail.me</a>
                 </p>
-                <p>email:
-                    <a  href="mailto:
-                    ">suleemail</a>
-                </p>
-                <p>phone number: 123456789</p>
-                <p>address: 1234 street</p>
+
+                <p>Phone number: +90 11111 1111 111 </p>
+                <p>Address: Hacettepe University</p>
 
             </div>
         </div>

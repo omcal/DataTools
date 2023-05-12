@@ -34,7 +34,6 @@ const Home = () => {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-
     const [customType, setCustomType] = useState([
     { id: 1, checked: false, label: 'Human-Centric' },
     { id: 2, checked: false, label: 'Workshop-based' },
@@ -49,7 +48,6 @@ const Home = () => {
 
     //set to stream ,batch, graph, distributed, relational, document, key-value, time-series
 
-    console.log(selectedCategory);
   if (selectedCategory === 'db') {
     if (customType[0].label!=='Distributed'){
         setCustomType([
@@ -62,6 +60,7 @@ const Home = () => {
             { id: 7, checked: false, label: 'Stream' },
             { id: 8, checked: false, label: 'Batch' },
             { id: 9, checked: false, label: 'Big-Data' },
+            { id: 10, checked: false, label: 'Vector Database' },
 
         ]);
     }
@@ -76,8 +75,6 @@ const Home = () => {
                     { id: 5, checked: false, label: 'Functionality' },
                     { id: 6, checked: false, label: 'Auxiliary Tasks' },
                     { id: 7, checked: false, label: 'General Characteristics' },
-
-
                 ]);
             }
     }
@@ -91,7 +88,6 @@ const Home = () => {
             { id: 6, checked: false, label: 'Integration with other tools' },
         ]);
         }
-
     }
 
 
@@ -108,7 +104,6 @@ const Home = () => {
                 setIsLoading(false);
             });
         }
-        console.log(dataList2)
 
         if(selectedCategory==null){
           if (customType[0].label !== 'Human-Centric' && (customType[0].label !== 'Distributed' || customType[0].label !== 'Performance')) {

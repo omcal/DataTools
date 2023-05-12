@@ -9,6 +9,7 @@ function SubmissionForm() {
     const [link, setLink] = useState("");
     const [category, setCategory] = useState("");
     const [type, setType] = useState("");
+    const SHEET_URL=process.env.REACT_APP_GOOGLE_SHEET_URL;
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -26,7 +27,7 @@ function SubmissionForm() {
             return;
         }
 
-        axios.post("secret", data)
+        axios.post(SHEET_URL, data)
             .then((response) => {
                 console.log(response);
                 setTitle("");
@@ -77,7 +78,7 @@ function SubmissionForm() {
                     value={type}
                     onChange={(event) => setType(event.target.value)}
                 />
-                <label htmlFor="type">Type:</label>
+                <label htmlFor="type">Criteria:</label>
             </div>
             <div className="input-field">
                 <input
