@@ -1,4 +1,17 @@
 # bbm479
+
+# Important
+To set env change env file to .env
+here is content of .env
+
+"SKIP_PREFLIGHT_CHECK=true
+CI=false yarn build
+REACT_APP_SUPABASE_URL="URL"
+REACT_APP_SUPABASE_ANON_KEY="SECRET"
+REACT_APP_GOOGLE_SHEET_URL="sheet best"
+REACT_APP_TOOL_URL="AHP-Tool Link""
+
+
 ## First App
 Notes if db is not working:
 ALTER SEQUENCE dataset_id_seq RESTART WITH 9;
@@ -46,5 +59,3 @@ create table
 ### Note Admin Password 
 Default password is: "pass"
 You can change it in "AdminLogin.js"
-
-
