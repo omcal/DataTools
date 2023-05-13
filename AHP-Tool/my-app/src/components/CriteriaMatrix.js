@@ -40,8 +40,8 @@ function CriteriaMatrix({ parameters, alternatives, onCalculate }) {
         const results = calculateAHP(matrix, priorities);
         console.log("Consistency:", results.consistency);
         if (results.consistency.isConsistent===false){
-            toast.error('The matrix is not consistent. Please check the matrix and try again.');
-            onCalculate(null);
+            toast.error('The matrix is may inconsistent. Please check the matrix and try again.');
+            onCalculate(results.alternatives);
         }
         else{
             toast.success('The matrix is consistent. You can proceed to the next step or You can export the results.');
@@ -50,15 +50,29 @@ function CriteriaMatrix({ parameters, alternatives, onCalculate }) {
     };
 
     const handlePriorityChange = (index, newValue) => {
-        const sum = priorities.reduce((acc, _, i) => {
-            return i === index ? acc : acc + priorities[i];
-        }, 0);
-        const factor = (1 - newValue) / sum;
-        const newPriorities = priorities.map((value, i) =>
-            i === index ? newValue : value * factor
-        );
+        // Ensure the newValue is within the valid range
+        if (newValue < 0 || newValue > 1) {
+            return; // Exit the function without updating the state
+        }
+
+        const newPriorities = [...priorities];
+        newPriorities[index] = newValue;
         setPriorities(newPriorities);
     };
+
+
+
+    //it normalizes the priorities
+    // const handlePriorityChange = (index, newValue) => {
+    //     const sum = priorities.reduce((acc, _, i) => {
+    //         return i === index ? acc : acc + priorities[i];
+    //     }, 0);
+    //     const factor = (1 - newValue) / sum;
+    //     const newPriorities = priorities.map((value, i) =>
+    //         i === index ? newValue : value * factor
+    //     );
+    //     setPriorities(newPriorities);
+    // };
 
     return (
         <div>
