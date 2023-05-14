@@ -36,8 +36,8 @@ const Home = () => {
 
     const [customType, setCustomType] = useState([
     { id: 1, checked: false, label: 'Human-Centric' },
-    { id: 2, checked: false, label: 'Workshop-based' },
-    { id: 3, checked: false, label: 'Neutrally facilitated' },
+    { id: 2, checked: false, label: 'Cost-effectiveness' },
+    { id: 3, checked: false, label: 'Community Support' },
     { id: 4, checked: false, label: 'Lightly processed' },
     { id: 5, checked: false, label: 'Modular' },
     { id: 6, checked: false, label: 'Scalable' },
@@ -109,8 +109,8 @@ const Home = () => {
           if (customType[0].label !== 'Human-Centric' && (customType[0].label !== 'Distributed' || customType[0].label !== 'Performance')) {
             setCustomType([
               {id: 1, checked: false, label: 'Human-Centric'},
-              {id: 2, checked: false, label: 'Workshop-based'},
-              {id: 3, checked: false, label: 'Neutrally facilitated'},
+              {id: 2, checked: false, label: 'Cost-effectiveness'},
+              {id: 3, checked: false, label: 'Community Support'},
               {id: 4, checked: false, label: 'Lightly processed'},
               {id: 5, checked: false, label: 'Modular'},
               {id: 6, checked: false, label: 'Scalable'},

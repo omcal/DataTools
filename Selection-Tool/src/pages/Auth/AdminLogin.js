@@ -7,7 +7,7 @@ const AdminLogin = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const adminPassword = 'pass'; // Replace this with the actual admin password
+        const adminPassword = 'admin'; // Replace this with the actual admin password
 
         if (password === adminPassword) {
             window.location.href = '/admin/add';

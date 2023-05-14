@@ -84,8 +84,8 @@ function SubmitForm() {
             setCustomType([
 
                 { id: 1, checked: false, label: 'Human-Centric' },
-                { id: 2, checked: false, label: 'Workshop-based' },
-                { id: 3, checked: false, label: 'Neutrally facilitated' },
+                { id: 2, checked: false, label: 'Cost-effectiveness' },
+                { id: 3, checked: false, label: 'Community Support' },
                 { id: 4, checked: false, label: 'Lightly processed' },
                 { id: 5, checked: false, label: 'Modular' },
                 { id: 6, checked: false, label: 'Scalable' },
@@ -142,10 +142,24 @@ function SubmitForm() {
         console.log(submittedData);
 
         const { data, error } = await uploadData(submittedData);
-        if (data) {
+        if (error===null) {
             console.log("uploaded");
             M.toast({ html: 'Form submitted!', classes: 'rounded' });
-        } else if (error) {
+            // Reset the form
+            setFormData({
+                title: '',
+                CommentAbout: '',
+                LinkToMD: '',
+                category: '',
+                type: [],
+                price: '',
+                coverSrc: '',
+                score: '',
+                customType: [],
+            });
+            window.location.reload();
+            }
+         else if (error) {
             console.log(error);
             M.toast({ html: 'Error submitting form!', classes: 'rounded' });
         }
@@ -172,7 +186,7 @@ function SubmitForm() {
                 </div>
 
                 <div className="input-field">
-                    <label htmlFor="rating" className="select-label">Data Science WorkFlow</label>
+                    <label htmlFor="rating" className="select-label">Data Science Workflow</label>
                     <select
                         name="rating"
                         onChange={handleChange}

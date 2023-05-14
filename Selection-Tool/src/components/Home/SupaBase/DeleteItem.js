@@ -31,10 +31,11 @@ function DeleteForm() {
         }
 
         const { data, error } = await deleteData(selectedTitle);
-        if (data) {
+        if (error===null) {
             console.log('deleted');
             M.toast({ html: 'Item deleted!', classes: 'rounded' });
             setSelectedTitle('');
+            window.location.reload();
         } else if (error) {
             console.log(error);
             M.toast({ html: 'Error deleting item!', classes: 'rounded' });
