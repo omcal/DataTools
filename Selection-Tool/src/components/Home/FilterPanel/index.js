@@ -20,7 +20,7 @@ const FilterPanel = ({
 
     </div>
       <div className='input-group'>
-          <p className='label'>Data Science WorkFlow</p>
+          <p className='label'>Data Science Workflow</p>
           <FilterListToggle
               options={DataScienceWorkFlowList}
               value={selectedRating}

@@ -66,26 +66,30 @@ const Home = () => {
     }
   }
     if (selectedCategory === 'mining') {
-    if (customType[0].label!=='Performance'){
+    if (customType[0].label!=='Supervised Learning'){
                 setCustomType([
-                    { id: 1, checked: false, label: 'Performance' },
-                    { id: 2, checked: false, label: 'Scalability' },
-                    { id: 3, checked: false, label: 'Reliability' },
-                    { id: 4, checked: false, label: 'Usability' },
-                    { id: 5, checked: false, label: 'Functionality' },
-                    { id: 6, checked: false, label: 'Auxiliary Tasks' },
-                    { id: 7, checked: false, label: 'General Characteristics' },
+                    { id: 1, checked: false, label: 'Supervised Learning' },
+                    { id: 2, checked: false, label: 'Unsupervised Learning' },
+                    { id: 3, checked: false, label: 'Semi-Supervised Learning' },
+                    { id: 4, checked: false, label: 'Reinforcement Learning' },
+                    { id: 5, checked: false, label: 'Deep Learning' },
+                    { id: 6, checked: false, label: 'Time Series Analysis' },
+                    { id: 7, checked: false, label: 'Text Mining' },
+                    { id: 8, checked: false, label: 'Anomaly Detection' },
+                    { id: 9, checked: false, label: 'Association Rule Mining' },
+                    { id: 10, checked: false, label: 'Parallel Processing' },
+                    { id: 11, checked: false, label: 'Graphical User Interface (GUI)' },
                 ]);
             }
     }
     if (selectedCategory === 'dv') {
-        if (customType[0].label!=='Interactivity'){
+        if (customType[0].label!=='Open Source'){
         setCustomType([
-            { id: 2, checked: false, label: 'Interactivity' },
-            { id: 3, checked: false, label: 'Customizability' },
-            { id: 4, checked: false, label: 'Export options' },
-            { id: 5, checked: false, label: 'Real-time data visualization' },
-            { id: 6, checked: false, label: 'Integration with other tools' },
+            { id: 2, checked: false, label: 'Open Source' },
+            { id: 3, checked: false, label: 'Web-Based' },
+            { id: 4, checked: false, label: 'Scripting Required' },
+            { id: 5, checked: false, label: 'Real-Time Visualization' },
+            { id: 6, checked: false, label: 'Integration with Big Data Tools' },
         ]);
         }
     }
@@ -106,7 +110,7 @@ const Home = () => {
         }
 
         if(selectedCategory==null){
-          if (customType[0].label !== 'Human-Centric' && (customType[0].label !== 'Distributed' || customType[0].label !== 'Performance')) {
+          if (customType[0].label !== 'Human-Centric' && (customType[0].label !== 'Distributed' || customType[0].label !== 'Supervised Learning')) {
             setCustomType([
               {id: 1, checked: false, label: 'Human-Centric'},
               {id: 2, checked: false, label: 'Cost-effectiveness'},
